@@ -1,4 +1,4 @@
-# parstream [![crates.io](https://img.shields.io/crates/v/parstream.svg)](https://crates.io/crates/parstream) | [![Documentation](https://docs.rs/parstream/badge.svg)](https://docs.rs/parstream) [![Build Status](https://travis-ci.org/newpavlov/parstream.svg?branch=master)](https://travis-ci.org/newpavlov/parstream)
+# parstream [![crates.io](https://img.shields.io/crates/v/parstream.svg)](https://crates.io/crates/parstream) [![Documentation](https://docs.rs/parstream/badge.svg)](https://docs.rs/parstream) [![Build Status](https://travis-ci.org/newpavlov/parstream.svg?branch=master)](https://travis-ci.org/newpavlov/parstream) [![dependency status](https://deps.rs/repo/github/newpavlov/parstream/status.svg)](https://deps.rs/repo/github/newpavlov/parstream)
 Compute function over iterator in a streaming fashion using thread pool and
 preserving order of elements.
 
