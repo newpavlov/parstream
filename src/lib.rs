@@ -20,7 +20,7 @@
 //!     },
 //! );
 //!
-//! assert_eq!(res, Ok(11));
+//! assert_eq!(res, Ok(xs.len()));
 //! assert_eq!(ys, xs.iter().map(f).collect::<Vec<_>>());
 //! ```
 //!
