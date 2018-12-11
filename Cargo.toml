@@ -1,10 +1,10 @@
 [package]
 name = "parstream"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Artyom Pavlov <newpavlov@gmail.com>"]
 edition = "2018"
 license = "MIT OR Apache-2.0"
-description = "Compute function over iterator in a streaming fashion using thread pool and preserving order of elements."
+description = "Crate for computing function over iterator in a streaming fashion using multi-threading while preserving order."
 documentation = "https://docs.rs/parstream"
 repository = "https://github.com/newpavlov/parstream"
 
