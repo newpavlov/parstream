@@ -23,9 +23,9 @@ let res: Result<usize, ()> = parstream::run(
 assert_eq!(res, Ok(xs.len()));
 assert_eq!(ys, xs.iter().map(f).collect::<Vec<_>>());
 ```
-If one of callbacks will return error, no new tasks will be started and
-`run` will end as soon as possible (after threads cleanup) to report this
-error to caller.
+If one of callbacks will return error, no new tasks will be started and `run`
+will end as soon as possible (after threads cleanup) to report this error to
+caller.
 ```rust
 #[derive(Eq, PartialEq, Debug)]
 struct MyError(usize);
@@ -43,7 +43,7 @@ let res = parstream::run(xs.iter().enumerate(), 4,
         Ok(())
     },
 );
-//!
+
 assert_eq!(res, Err(MyError(5)));
 assert_eq!(ys.len(), 0);
 ```
