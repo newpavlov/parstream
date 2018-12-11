@@ -150,7 +150,7 @@ pub fn run<X: Send, Y: Send, E: Send>(
     report: impl FnMut(Y) -> Result<(), E> + Send
 ) -> Result<usize, E> {
     let (tx, rx) = channel::bounded(2*threads);
-    let (tx2, rx2) = channel::unbounded();
+    let (tx2, rx2) = channel::bounded(2*threads);
     // FLAG_INIT = 0 represents default value
     // FLAG_INIT > 0 represents number of elements in the non-empty iterator
     // FLAG_INIT < 0 rуpresents error or panics which have happened in threads
