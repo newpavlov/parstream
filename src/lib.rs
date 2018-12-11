@@ -19,6 +19,7 @@
 //! # Warning
 //! First closure in `run` should not panic!
 use std::collections::BinaryHeap;
+use std::collections::binary_heap::PeekMut;
 use std::cmp::Ordering;
 
 use crossbeam_channel as channel;
@@ -72,10 +73,10 @@ fn run_report<T>(
                 }
                 f(payload);
                 n += 1;
-                while let Some(&State { pos, .. }) = buf.peek() {
-                    assert!(pos >= n);
-                    if pos != n { break }
-                    f(buf.pop().unwrap().payload);
+                while let Some(pm) = buf.peek_mut() {
+                    assert!(pm.pos >= n);
+                    if pm.pos != n { break }
+                    f(PeekMut::pop(pm).payload);
                     n += 1
                 }
                 if let Some(t) = target {
